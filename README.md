@@ -25,4 +25,4 @@ Remove all unnecessary files by calling `make clean` command.
 ./huffdekoder [hiffman_table.txt] [input_file] [output_file]
 ```
 ## Remark
-In some cases huffdekder the **huffdekoder** will not be able to decode well last byte.
+In some cases the **huffdekoder** will not be able to decode well last byte.
