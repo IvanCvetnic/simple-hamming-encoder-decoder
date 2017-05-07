@@ -14,6 +14,7 @@ Remove all unnecessary files by calling `make clean` command.
 - **`input_file`** 
 	* any binary file that will be encoded
 - **`huffman_table.txt`** 
+	* **`huffkoder`** creates this file and filled it
 	* table of **256** row, where each row represent huffman code for one byte in text format
 	* first row represent huffman code for byte **0x00**, and last for **0xFF**
 - **`output_file`**
