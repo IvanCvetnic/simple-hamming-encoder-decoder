@@ -1,13 +1,27 @@
 # simple-hamming-encoder-decoder
-Simple console programs for encoding and decoding binary files using Hamming algorithm.
+Simple console programs for encoding and decoding binary files using Hamming algorithm.<br />
 
-Call programs:
-huffkoder [input_file] [huffman_table.txt] [output_file]
+## Makefile
+Create executive programs by calling `make` command.
+Remove all unnecessary files by calling `make clean` command. 
+
+## Call programs:
+
+### Huffkoder
+```
+./huffkoder [input_file] [huffman_table.txt] [output_file]
+```	
+- **`input_file`** 
+	* any binary file that will be encoded
+- **`huffman_table.txt`** 
+	* table of **256** row, where each row represent huffman code for one byte in text format
+	* first row represent huffman code for byte **0x00**, and last for **0xFF**
+- **`output_file`**
+	* encoded **`input_file`**
 	
-	input_file - any binary file that you want coding
-	output_file - coded input_file
-	
-
-huffdekoder [hiffman_table.txt] [input_file] [output_file]
-
-# Nothing implemented yet!!!
+### Huffdekoder
+```
+./huffdekoder [hiffman_table.txt] [input_file] [output_file]
+```
+##Remark
+In some cases huffdekder the **huffdekoder** will not be able to decode well last byte.
