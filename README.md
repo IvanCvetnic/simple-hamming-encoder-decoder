@@ -1,5 +1,5 @@
 # simple-hamming-encoder-decoder
-Simple console programs for encoding and decoding binary files using Hamming algorithm.<br />
+Simple console programs for encoding and decoding binary files using Huffman algorithm.<br />
 
 ## Makefile
 Create executive programs by calling `make` command.
