@@ -7,22 +7,25 @@ Remove all unnecessary files by calling `make clean` command.
 
 ## Call programs:
 
-### Huffkoder
+### Huffencoder
 ```
-./huffkoder [input_file] [huffman_table.txt] [output_file]
+./huffencoder [input_file] [huffman_table.txt] [output_file]
 ```	
 - **`input_file`** 
 	* any binary file that will be encoded
 - **`huffman_table.txt`** 
-	* **`huffkoder`** creates this file and filled it
+	* **`huffencoder`** creates this file and filled it
 	* table of **256** row, where each row represent huffman code for one byte in text format
 	* first row represent huffman code for byte **0x00**, and last for **0xFF**
 - **`output_file`**
 	* encoded **`input_file`**
 	
-### Huffdekoder
+### Huffdecoder
 ```
-./huffdekoder [hiffman_table.txt] [input_file] [output_file]
+./huffdecoder [hiffman_table.txt] [input_file] [output_file]
 ```
 ## Remark
-In some cases the **huffdekoder** will not be able to decode well last byte.
+In some cases the **huffdekoder** will not be able to properly decode last byte.
+## What will be added/fixed in the future:
+- **huffdekoder** will be able to properly decode last byte in all cases
+- code will be better optimized and it will have comments
