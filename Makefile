@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -Wall -g
 
-all: huffkoder huffdekoder
+all: huffencoder huffdecoder
 
-huffkoder: huffkoder.c
-	$(CC) $(CFLAGS) -o huffkoder huffkoder.c
+huffencoder: huffencoder.c
+	$(CC) $(CFLAGS) -o huffencoder huffencoder.c
 	
-huffdekoder: huffdekoder.c
-	$(CC) $(CFLAGS) -o huffdekoder huffdekoder.c
+huffdecoder: huffdecoder.c
+	$(CC) $(CFLAGS) -o huffdecoder huffdecoder.c
 	
 clean:
-	-rm -f huffkoder huffdekoder *.o *.core
+	-rm -f huffencoder huffdecoder *.o *.core
