@@ -14,17 +14,16 @@ Remove all unnecessary files by calling `make clean` command.
 - **`input_file.*`** 
 	* file that will be encoded
 - **`huffman_table.txt`**
-	* table of **256** row, where each row represent huffman code for one byte in text format
+	* table of **256** rows, where each row represent huffman code for one byte in text format
 	* first row represent huffman code for byte **0x00**, and last for **0xFF**
 	* ```./huffencoder``` creates this file and fills it
 	* name for this file can be arbitrary
 - **`output_file.bin`**
-	* encoded **`input_file`**
+	* encoded **`input_file.*`**
 	* name for this file can be arbitrary
 	
 #### Description:	
-This program first passes trough the entire **`input_file.*`** by reading it byte by byte, and counts frequency of occurrence of each different byte. Then, by using counted frequencies and huffman algorithm, program creates binary huffman code for each of 256 bytes. Bytes with higher frequency of occurrence in **`input_file.*`** will have less bits in it's huffman code and vice versa. Huffman code for every byte is written in **`huffman_table.txt`** in text format. First row has code for byte **0x00**, second for byte **0x01**, and so on to the last for byte **0xFF**.</br>
-At the end, program by using generated huffman table and **`input_file.*`** creates **`output_file.bin`**.
+This program first passes trough the entire **`input_file.*`** by reading it byte by byte, and counts frequency of occurrence of each different byte. Then, by using counted frequencies and huffman algorithm, program creates binary huffman code for each of 256 bytes. Bytes with higher frequency of occurrence in **`input_file.*`** will have less bits in it's huffman code and vice versa. Huffman code for every byte is written in **`huffman_table.txt`** in text format. First row has code for byte **0x00**, second for byte **0x01**, and so on to the last for byte **0xFF**. At the end, program by using generated huffman table and **`input_file.*`** creates **`output_file.bin`**.
 
 #### Example:
 - **`input.txt :`**</br>
