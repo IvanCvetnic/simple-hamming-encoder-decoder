@@ -3,8 +3,15 @@
 #include <string.h>
 #include <malloc.h>
 
+/*Number of all possible different bytes.
+Obtained as 2^8.*/
 #define N 256
 
+/*This structure represents data for one of 256 bytes.
+Pointers *left and *right are used for putting instances
+of this structure in 'huffman_tree'.
+Pointer *next is used for putting instances of this
+structure in 'toplist'.*/
 typedef struct oc {
     unsigned char number;
     int freq;
@@ -14,14 +21,23 @@ typedef struct oc {
     struct oc *next;
 } octet;
 
+/*This structure is used to save generated huffman code
+for one octet(~byte). Every bit is saved as one character in array.*/
 typedef struct cd {
     char code[N]; 
 } octet_code;
 
+/*Every octet(~byte) has it's own 'octet_code'.*/  
 octet_code *codes[N];
+
+/*Helper pointer array for octets.*/
 octet *octets[N];
 
+/*Pointer on beginig of 'toplist'. List is used for sorting octets
+in order of frequency of their appearance 'oc->freq'.*/
 octet *toplist = NULL;
+
+/*Represent root pointer for Huffman tree.*/
 octet *huffman_tree = NULL;
 
 
@@ -175,7 +191,7 @@ int main (int argc, char **argv) {
     unsigned char byte;
     
     if (argc != 4) {
-        printf ("Usage:\n\t %s [input_file] [huffman_table.txt] [output_file]\n", argv[0]);
+        printf ("Usage:\n\t %s [input_file.*] [huffman_table.txt] [output_file.bin]\n", argv[0]);
         exit(1);
     }
     if ((input = fopen(argv[1], "rb")) == NULL) {
