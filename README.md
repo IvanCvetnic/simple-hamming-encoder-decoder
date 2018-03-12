@@ -1,4 +1,4 @@
-# simple-hamming-encoder-decoder
+# simple-huffman-encoder-decoder
 Simple console programs for encoding and decoding binary files using Huffman algorithm.<br />
 
 ## Makefile
